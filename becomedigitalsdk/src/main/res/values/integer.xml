@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<integer name="anim_length">300</integer>
+<integer name="anim_length_half">150</integer>
+<integer name="longAnimTime">800</integer>
+    <integer name="timeOut">180</integer>
+    <integer name="milisecondTimer">30000</integer>
+    <integer name="milisecondRecodr">1000</integer>
+
+</resources>

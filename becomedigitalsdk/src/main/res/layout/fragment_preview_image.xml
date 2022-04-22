@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".PreviewImageFragment">
+
+    <ImageView
+        android:id="@+id/imgToPreview"
+        android:layout_width="317dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnOkImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars[10]"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="@string/text_info_preview"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_sub_tittle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgToPreview"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imgToPreview"
+        app:layout_constraintTop_toBottomOf="@+id/imgToPreview" />
+
+    <Button
+        android:id="@+id/btnRetry"
+        style="@android:style/Widget.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/trasnparent"
+        android:drawableStart="@drawable/reload_icon_white25x26_2x"
+        android:drawablePadding="10dp"
+        android:enabled="true"
+        android:gravity="left|center"
+        android:paddingStart="10dp"
+        android:text="@string/text_retry_previe"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOkImage"
+        app:layout_constraintEnd_toStartOf="@+id/btnOkImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnOkImage"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <Button
+        android:id="@+id/btnOkImage"
+        style="@android:style/Widget.Button"
+        android:layout_width="190dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="74dp"
+        android:background="@drawable/rounded_corners"
+        android:drawablePadding="20dp"
+        android:enabled="true"
+        android:gravity="left|center"
+        android:paddingLeft="20dp"
+        android:text="@string/text_confirm_preview"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/imgProgressBarDoc"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/progress_document_contrast"
+        app:layout_constraintEnd_toEndOf="@+id/btnOkImage"
+        app:layout_constraintStart_toStartOf="@+id/btnRetry"
+        app:layout_constraintTop_toBottomOf="@+id/btnOkImage"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

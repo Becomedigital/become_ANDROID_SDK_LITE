@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_body">15sp</dimen>
+    <dimen name="text_size_tittle">17sp</dimen>
+    <dimen name="text_size_sub_tittle">16sp</dimen>
+    <dimen name="text_size_btn">16sp</dimen>
+    <dimen name="text_size_big">20sp</dimen>
+    <dimen name="text_size_small">13sp</dimen>
+    <dimen name="wVideo">350dp</dimen>
+    <dimen name="hVideo">600dp</dimen>
+</resources>

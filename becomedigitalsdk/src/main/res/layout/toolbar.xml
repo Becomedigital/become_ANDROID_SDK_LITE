@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:theme="@style/ThemeToolbar"
+    app:titleTextColor="@android:color/black"
+    tools:targetApi="lollipop">
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_gravity="left"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_icon_dark34x28_2x"
+        android:textColor="#FFF"
+        android:textSize="12sp"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="7sp"
+        android:layout_marginBottom="7sp"
+        android:foregroundGravity="center"
+        tools:srcCompat="@tools:sample/avatars[0]"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/btnCancel"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end"
+        android:layout_margin="15dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_cancel_black"
+        android:textColor="#FFF"
+        android:textSize="12sp"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+</androidx.appcompat.widget.Toolbar>

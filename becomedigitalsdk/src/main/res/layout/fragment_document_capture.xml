@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.becomedigital.sdk.identity.becomedigitalsdk.DocumentCaptureFragment">
+
+    <com.becomedigital.sdk.identity.becomedigitalsdk.mediaRecorders.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgReferenceDocument"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_document"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imgDocReference"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="55dp"
+        android:alpha="0.45"
+        android:src="@drawable/reference_capture_document"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imgReferenceDocument"
+        app:layout_constraintEnd_toEndOf="@+id/imgReferenceDocument"
+        app:layout_constraintStart_toStartOf="@+id/imgReferenceDocument"
+        app:layout_constraintTop_toTopOf="@+id/imgReferenceDocument"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.84"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgReferenceDocument"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textTittleVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+            android:text="@string/text_tittle_video"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_tittle"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.84"
+        android:background="@color/black"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgReferenceDocument"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/textTimerToStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgReferenceDocument"
+        app:layout_constraintEnd_toEndOf="@+id/imgReferenceDocument"
+        app:layout_constraintStart_toStartOf="@+id/imgReferenceDocument"
+        app:layout_constraintTop_toTopOf="@+id/imgReferenceDocument" />
+
+    <ImageButton
+        android:id="@+id/btnCapture"
+        android:layout_width="58dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/imgProgressVideo"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgReferenceDocument"
+        app:srcCompat="@drawable/capturebtn"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imgProgressVideo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/biometric_bar_contrast"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ProgressBar
+        android:id="@+id/imgGifCapture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCapture"
+        app:layout_constraintEnd_toEndOf="@+id/btnCapture"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/btnCapture"
+        app:layout_constraintTop_toTopOf="@+id/btnCapture" />
+</androidx.constraintlayout.widget.ConstraintLayout>

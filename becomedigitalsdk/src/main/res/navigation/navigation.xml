@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragment_gneral_intro">
+
+    <fragment
+        android:id="@+id/fragment_gneral_intro"
+        android:name="com.becomedigital.sdk.identity.becomedigitalsdk.GeneralIntroFragment"
+        android:label="fragment_fragment_gneral_intro"
+        tools:layout="@layout/fragment_fragment_gneral_intro">
+        <action
+            android:id="@+id/continueAction"
+            app:destination="@id/fragment_introduction_video"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+        <action
+            android:id="@+id/cancelAction"
+            app:destination="@id/cancelFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/initFrag"
+            app:destination="@id/selectDocumentTypeFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/goToTakeSelfie"
+            app:destination="@id/documentCaptureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_introduction_video"
+        android:name="com.becomedigital.sdk.identity.becomedigitalsdk.IntroductionVideoFragment"
+        android:label="fragment_fragment_introduction_video"
+        tools:layout="@layout/fragment_fragment_introduction_video">
+        <action
+            android:id="@+id/cancelAction"
+            app:destination="@id/cancelFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/fragRecordVideo"
+            app:destination="@id/videoRecorderFragment"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/selectDocumentTypeFragment"
+        android:name="com.becomedigital.sdk.identity.becomedigitalsdk.IntroSelectDocumentTypeFragment"
+        android:label="fragment_select_document_type"
+        tools:layout="@layout/fragment_intro_select_document_type">
+        <action
+            android:id="@+id/cancelAction"
+            app:destination="@id/cancelFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/SelectCountryAction"
+            app:destination="@id/selecCountryFragment"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/cancelFragment"
+        android:name="com.becomedigital.sdk.identity.becomedigitalsdk.CancelFragment"
+        android:label="fragment_cancel"
+        tools:layout="@layout/fragment_cancel" />
+    <fragment
+        android:id="@+id/selecCountryFragment"
+        android:name="com.becomedigital.sdk.identity.becomedigitalsdk.SelecCountryFragment"
+        android:label="fragment_selec_country"
+        tools:layout="@layout/fragment_selec_country">
+        <action
+            android:id="@+id/cancelAction"
+            app:destination="@id/cancelFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/actionIntroDocCapture"
+            app:destination="@id/introductionDocumentFragment"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/introductionDocumentFragment"
+        android:name="com.becomedigital.sdk.identity.becomedigitalsdk.IntroductionCaptureDocumentFragment"
+        android:label="fragment_introduction_document"
+        tools:layout="@layout/fragment_capture_introduction_document">
+        <action
+            android:id="@+id/cancelAction"
+            app:destination="@id/cancelFragment"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+        <action
+            android:id="@+id/actionPreviewPiker"
+            app:destination="@id/previewImageFragment"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+        <action
+            android:id="@+id/captureVideoAction"
+            app:destination="@id/documentCaptureFragment"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+        <action
+            android:id="@+id/actionFinishPicker"
+            app:destination="@id/finishFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/previewImageFragment"
+        android:name="com.becomedigital.sdk.identity.becomedigitalsdk.PreviewImageFragment"
+        android:label="fragment_preview_image"
+        tools:layout="@layout/fragment_preview_image">
+        <action
+            android:id="@+id/cancelAction"
+            app:destination="@id/cancelFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/actionCaptureBackDocument"
+            app:destination="@id/introductionDocumentFragment"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+        <action
+            android:id="@+id/actionFinish"
+            app:destination="@id/finishFragment"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.becomedigital.sdk.identity.becomedigitalsdk.FinishFragment"
+        android:label="fragment_finish"
+        tools:layout="@layout/fragment_finish">
+        <action
+            android:id="@+id/cancelAction"
+            app:destination="@id/cancelFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmVideoFracment"
+        android:name="com.becomedigital.sdk.identity.becomedigitalsdk.ConfirmVideoFracment"
+        android:label="fragment_confirm_video_fracment"
+        tools:layout="@layout/fragment_confirm_video_fracment">
+        <action
+            android:id="@+id/actionConfirm"
+            app:destination="@id/selectDocumentTypeFragment"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+        <action
+            android:id="@+id/cancelAction"
+            app:destination="@id/cancelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/documentCaptureFragment"
+        android:name="com.becomedigital.sdk.identity.becomedigitalsdk.DocumentCaptureFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_document_capture">
+        <action
+            android:id="@+id/actionPreviewImage"
+            app:destination="@id/previewImageFragment"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+        <action
+            android:id="@+id/cancelAction"
+            app:destination="@id/cancelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoRecorderFragment"
+        android:name="com.becomedigital.sdk.identity.becomedigitalsdk.VideoRecorderFragment"
+        android:label="fragment_video_recorder"
+        tools:layout="@layout/fragment_video_recorder">
+        <action
+            android:id="@+id/actionOkRecordSelecDocument"
+            app:destination="@id/confirmVideoFracment"
+            app:enterAnim="@anim/slide_left_right"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right_left" />
+        <action
+            android:id="@+id/cancelAction"
+            app:destination="@id/cancelFragment" />
+    </fragment>
+
+</navigation>
